@@ -3,9 +3,6 @@
     "description": "Single sign on of WSO2 by Sahapat.",
     "type": "library",
     "license": "MIT",
-    "require": {
-        "php": ">=5.5.9"        
-    },
     "authors": [
         {
             "name": "Watcharin Phaksunthon",

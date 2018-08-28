@@ -9,22 +9,14 @@ class ComposerStaticInitf6efe7b947da53e4cdc4aaeb6bbcb7fd
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'sahapat\\sso-wso2\\' => 17,
-        ),
-        'A' => 
-        array (
-            'App\\' => 4,
+            'siapble\\sso_wso2\\' => 17,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'sahapat\\sso-wso2\\' => 
+        'siapble\\sso_wso2\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/packages/sahapat/sso-wso2/src',
-        ),
-        'App\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

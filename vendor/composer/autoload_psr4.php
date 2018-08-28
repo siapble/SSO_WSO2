@@ -6,6 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'sahapat\\sso-wso2\\' => array($baseDir . '/packages/sahapat/sso-wso2/src'),
-    'App\\' => array($baseDir . '/app'),
+    'siapble\\sso_wso2\\' => array($baseDir . '/src'),
 );
