@@ -12,7 +12,8 @@
             "email": "watcharin.p@sahapat.co.th"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {		
         "illuminate/support": "5.2.*",
 		"php": ">=5.5.9"
@@ -26,9 +27,9 @@
     },
 	"extra": {
       "laravel": {
-          "providers": [
-              "siapble\\SSO_WSO2\\SingleSignOnServiceProvider"
-          ]
+            "providers": [
+                "siapble\\SSO_WSO2\\SingleSignOnServiceProvider"
+            ]
       }
 	}
 }
