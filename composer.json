@@ -17,6 +17,8 @@
         "illuminate/support": "5.2.*",
 		"php": ">=5.5.9"
 	},
+    "require-dev": {
+    },
     "autoload": {
         "psr-4": {            
             "siapble\\SSO_WSO2\\": "src/"
