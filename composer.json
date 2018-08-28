@@ -26,7 +26,10 @@
       "laravel": {
             "providers": [
                 "siapble\\sso_wso2\\SingleSignOnServiceProvider"
-            ]
+            ],
+             "aliases": {
+                "SSO_WSO2": "siapble\\sso_wso2\\Facades\\SSO_WSO2Facade"                
+            }
       }
 	}
 }
