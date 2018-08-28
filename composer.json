@@ -19,13 +19,13 @@
 	},
     "autoload": {
         "psr-4": {            
-            "siapble\\sso_wso2\\": "src/"
+            "siapble\\SSO_WSO2\\": "src/"
         }
     },
 	"extra": {
       "laravel": {
           "providers": [
-              "siapble\\sso_wso2\\SingleSignOnServiceProvider"
+              "siapble\\SSO_WSO2\\SingleSignOnServiceProvider"
           ]
       }
 	}
