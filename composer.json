@@ -1,0 +1,33 @@
+{
+    "name": "siapble/sso_wso2",
+    "description": "Single sign on of WSO2 by Sahapat.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.9"        
+    },
+    "authors": [
+        {
+            "name": "Watcharin Phaksunthon",
+            "email": "watcharin.p@sahapat.co.th"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+		"laravel/framework": "~5.2.0",
+        "illuminate/support": "5.*",
+		"php": ">=5.5.9"
+	},
+    "autoload": {
+        "psr-4": {            
+            "siapble\\sso_wso2\\": "src/"
+        }
+    },
+	"extra": {
+      "laravel": {
+          "providers": [
+              "siapble\\sso_wso2\\SingleSignOnServiceProvider"
+          ]
+      }
+	}
+}
