@@ -1,6 +1,6 @@
 <?php
 
-namespace siapble\SSO_WSO2;
+namespace siapble\sso_wso2;
 
 use Illuminate\Support\ServiceProvider;
 
