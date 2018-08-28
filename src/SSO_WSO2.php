@@ -137,6 +137,16 @@ class SSO_WSO2
     public function make_authorization_url($callback_url){
     	try {
 
+            $response = '';
+
+            if (empty($callback_url)) {
+                $response = array(
+                    'success'=>'false',
+                    'result'=>'callback_url is empty.'
+                );
+                return $response;
+            }
+
             if (!$this->client_id) {
                 $this->setClientId(app('config')->get("wso2spc.client_id"));
             }
