@@ -9,7 +9,6 @@ class SSO_WSO2
     protected $client_id;
     protected $client_secret;  
     protected $wso2_server_url;
-    protected $callback_url;
 
     protected function setClientId($code) {
         $this->client_id = $code;
@@ -25,11 +24,6 @@ class SSO_WSO2
         $this->wso2_server_url = $url;
         return $this;
     }
-
-    protected function setCallBackURL($url) {
-        $this->callback_url = $url;
-        return $this;
-    }    
 
     public function callback($processCode){
         try {
@@ -54,10 +48,6 @@ class SSO_WSO2
             if (!$this->wso2_server_url) {
                 $this->setWSO2ServerURL(app('config')->get("wso2spc.wso2_server_url"));
             }      
-
-            if (!$this->callback_url) {
-                $this->setCallBackURL(app('config')->get("wso2spc.callback_url"));
-            }                   
 
             //1. get token             
             $input = array(
@@ -144,7 +134,7 @@ class SSO_WSO2
         
     }
 
-    public function make_authorization_url(){
+    public function make_authorization_url($callback_url){
     	try {
 
             if (!$this->client_id) {
@@ -153,11 +143,7 @@ class SSO_WSO2
             
             if (!$this->wso2_server_url) {
                 $this->setWSO2ServerURL(app('config')->get("wso2spc.wso2_server_url"));
-            }      
-
-            if (!$this->callback_url) {
-                $this->setCallBackURL(app('config')->get("wso2spc.callback_url"));
-            }                   
+            }                          
 
     		$uuid = uniqid();
     		$data = array(
@@ -165,7 +151,7 @@ class SSO_WSO2
 			    'Grant_type' => 'authorization_code',
 			    'response_type' => 'code',
 			    'state' => $uuid,
-			    'redirect_uri' =>  $this->callback_url, //url('/sso/callback'),
+			    'redirect_uri' =>  $callback_url, //url('/sso/callback'),
 			    'scope' => 'openid'
 			);
     		$dataEncode = http_build_query($data);
