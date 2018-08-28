@@ -13,8 +13,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-		"laravel/framework": "~5.2.0",
+    "require": {		
         "illuminate/support": "5.*",
 		"php": ">=5.5.9"
 	},
